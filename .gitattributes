@@ -1,9 +1,24 @@
 delicious_islam_ain1_24 filter=lfs diff=lfs merge=lfs -text
 
-# Exclude platform folders from GitHub language statistics (Linguist)
-android/** linguist-generated=true
-ios/** linguist-generated=true
-linux/** linguist-generated=true
-macos/** linguist-generated=true
-web/** linguist-generated=true
-windows/** linguist-generated=true
+# Заставляем Linguist считать Kotlin в папке android
+android/** linguist-vendored=false
+*.kt linguist-vendored=false
+
+# Скрываем остальные платформозависимые языки
+ios/** linguist-vendored
+linux/** linguist-vendored
+macos/** linguist-vendored
+web/** linguist-vendored
+windows/** linguist-vendored
+
+*.swift linguist-vendored
+*.c linguist-vendored
+*.cpp linguist-vendored
+*.h linguist-vendored
+*.m linguist-vendored
+*.mm linguist-vendored
+*.html linguist-vendored
+*.java linguist-vendored
+*.gradle linguist-vendored
+*.xml linguist-vendored
+*.plist linguist-vendored
