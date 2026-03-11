@@ -1,1 +1,9 @@
 delicious_islam_ain1_24 filter=lfs diff=lfs merge=lfs -text
+
+# Exclude platform folders from GitHub language statistics (Linguist)
+android/** linguist-generated=true
+ios/** linguist-generated=true
+linux/** linguist-generated=true
+macos/** linguist-generated=true
+web/** linguist-generated=true
+windows/** linguist-generated=true
