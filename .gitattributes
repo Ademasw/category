@@ -1,5 +1,8 @@
 delicious_islam_ain1_24 filter=lfs diff=lfs merge=lfs -text
 
+# Скрываем сам файл .gitattributes из статистики языков репозитория
+.gitattributes linguist-vendored
+
 # Заставляем Linguist считать Kotlin в папке android
 android/** linguist-vendored=false
 *.kt linguist-vendored=false
